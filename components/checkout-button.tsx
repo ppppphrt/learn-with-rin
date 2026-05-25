@@ -27,11 +27,11 @@ export function CheckoutButton({ productId, label, className }: CheckoutButtonPr
       if (data.url) {
         window.location.href = data.url
       } else {
-        setError("เกิดข้อผิดพลาด กรุณาลองใหม่")
+        setError(data.error ?? "เกิดข้อผิดพลาด กรุณาลองใหม่")
         setLoading(false)
       }
-    } catch {
-      setError("เกิดข้อผิดพลาด กรุณาลองใหม่")
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "เกิดข้อผิดพลาด กรุณาลองใหม่")
       setLoading(false)
     }
   }

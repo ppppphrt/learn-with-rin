@@ -27,11 +27,7 @@ export function SubscribeForm() {
 
       if (res.ok) {
         setStatus("success")
-        setMessage(
-          contact.includes("@")
-            ? "เช็คอีเมลได้เลยค่ะ! ไฟล์ถูกส่งไปแล้ว 🎉"
-            : "บันทึกแล้ว! ทีมจะส่งไฟล์ทาง LINE ให้เร็ว ๆ นี้ค่ะ"
-        )
+        setMessage("เช็คอีเมลได้เลยค่ะ! ไฟล์ถูกส่งไปแล้ว 🎉")
         setName("")
         setContact("")
       } else {
@@ -70,10 +66,11 @@ export function SubscribeForm() {
         disabled={status === "loading"}
       />
       <input
+        type="email"
         value={contact}
         onChange={(e) => setContact(e.target.value)}
         className="h-13 w-full rounded-2xl border border-sky-100 bg-[#F8FCFF] px-4 py-3 outline-none focus:border-[#4DA3FF] focus:ring-2 focus:ring-sky-100"
-        placeholder="อีเมล หรือ LINE ID"
+        placeholder="อีเมลของคุณ"
         required
         disabled={status === "loading"}
       />
