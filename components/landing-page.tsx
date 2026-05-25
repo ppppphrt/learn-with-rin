@@ -122,8 +122,8 @@ export default function LandingPage() {
             <a href="#free" className="hover:text-blue-500">ไฟล์ฟรี</a>
             <a href="#product" className="hover:text-blue-500">E-book</a>
           </div>
-          <Button className="rounded-full bg-[#4DA3FF] px-5 text-white hover:bg-[#2F80ED]">
-            รับ Checklist ฟรี
+          <Button className="rounded-full bg-[#4DA3FF] px-5 text-white hover:bg-[#2F80ED]" asChild>
+            <a href="#free">รับ Checklist ฟรี</a>
           </Button>
         </nav>
       </header>
@@ -277,9 +277,9 @@ export default function LandingPage() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-black leading-[3.0] text-[#123A63]">{article.title}</h3>
                   <p className="mt-3 leading-7 text-slate-600">{article.desc}</p>
-                  <div className="mt-5 flex items-center font-bold text-[#2F80ED]">
+                  <a href="#free" className="mt-5 flex items-center font-bold text-[#2F80ED]">
                     อ่านต่อ <ChevronRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
-                  </div>
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -446,9 +446,6 @@ export default function LandingPage() {
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
               ไม่ต้องรีบซื้ออะไร แค่เริ่มอ่าน เริ่มทำตาม และค่อย ๆ เปลี่ยน AI ให้เป็นเครื่องมือในการคว้าเงินจากอากาศ
             </p>
-            <Button className="mt-7 rounded-full bg-[#4DA3FF] px-8 text-white hover:bg-[#2F80ED]">
-              เริ่มที่หน้า Start Here <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
           </div>
         </section>
       </main>

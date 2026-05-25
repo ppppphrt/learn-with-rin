@@ -33,7 +33,11 @@ export async function POST(req: NextRequest) {
     if (isNew) {
       const emailResult = await sendWelcomeEmail({ name, email: contact })
       if (emailResult.error) {
-        console.error("Email send error:", emailResult.error)
+        console.error("Email send error:", JSON.stringify(emailResult.error))
+        return NextResponse.json(
+          { error: "บันทึกข้อมูลแล้ว แต่ส่งอีเมลไม่ได้ กรุณาติดต่อ LINE" },
+          { status: 500 }
+        )
       }
     }
 
