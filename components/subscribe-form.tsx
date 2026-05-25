@@ -2,7 +2,9 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2 } from "lucide-react"
+import { CheckCircle2, Download } from "lucide-react"
+
+const CHECKLIST_URL = "https://drive.google.com/file/d/12kcjQzuifT3A0q9T9v_JxhPXQlu_Xi0o/view?usp=sharing"
 
 type Status = "idle" | "loading" | "success" | "error"
 
@@ -27,7 +29,6 @@ export function SubscribeForm() {
 
       if (res.ok) {
         setStatus("success")
-        setMessage("เช็คอีเมลได้เลยค่ะ! ไฟล์ถูกส่งไปแล้ว 🎉")
         setName("")
         setContact("")
       } else {
@@ -42,12 +43,21 @@ export function SubscribeForm() {
 
   if (status === "success") {
     return (
-      <div className="mt-6 flex flex-col items-center gap-3 rounded-2xl bg-green-50 p-8 text-center">
+      <div className="mt-6 flex flex-col items-center gap-4 rounded-2xl bg-green-50 p-8 text-center">
         <CheckCircle2 className="h-10 w-10 text-green-500" />
-        <p className="font-bold text-green-700">{message}</p>
+        <p className="text-lg font-black text-green-700">ยินดีด้วยค่ะ! ไฟล์พร้อมแล้ว</p>
+        <p className="text-sm text-slate-500">กดปุ่มด้านล่างเพื่อเปิด Checklist ได้เลยค่ะ</p>
+        <a
+          href={CHECKLIST_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 rounded-full bg-[#4DA3FF] px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-[#2F80ED]"
+        >
+          <Download className="h-4 w-4" /> เปิด Checklist ฟรี
+        </a>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-2 text-sm text-slate-400 underline"
+          className="mt-1 text-xs text-slate-400 underline"
         >
           กรอกใหม่
         </button>
