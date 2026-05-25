@@ -7,10 +7,24 @@ export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }))
 }
 
+const BASE_URL = "https://learn-with-rin-m252.vercel.app"
+
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const article = getArticle(params.slug)
   if (!article) return {}
-  return { title: `${article.title} | Learn with Rin` }
+  return {
+    title: article.title,
+    description: article.desc,
+    keywords: ["หาเงินจาก ai", "อาชีพเสริมจาก ai", article.category, "learn with rin"],
+    openGraph: {
+      title: article.title,
+      description: article.desc,
+      url: `${BASE_URL}/blog/${article.slug}`,
+      type: "article",
+      locale: "th_TH",
+    },
+    alternates: { canonical: `${BASE_URL}/blog/${article.slug}` },
+  }
 }
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
@@ -21,8 +35,20 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const prev = articles[currentIndex + 1]
   const next = articles[currentIndex - 1]
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.desc,
+    author: { "@type": "Person", name: "Learn with Rin" },
+    publisher: { "@type": "Organization", name: "Learn with Rin", url: BASE_URL },
+    url: `${BASE_URL}/blog/${article.slug}`,
+    inLanguage: "th",
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <header className="border-b border-sky-100 bg-white px-5 py-5 lg:px-8">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <Link href="/">
