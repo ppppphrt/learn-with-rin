@@ -53,7 +53,7 @@ export function SubscribeForm() {
           rel="noreferrer"
           className="flex items-center gap-2 rounded-full bg-[#4DA3FF] px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-[#2F80ED]"
         >
-          <Download className="h-4 w-4" /> เปิด Checklist ฟรี
+          <Download className="h-4 w-4" /> โหลด Checklist
         </a>
         <button
           onClick={() => setStatus("idle")}
