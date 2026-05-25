@@ -13,16 +13,19 @@ import { CheckoutButton } from "@/components/checkout-button"
 
 const articles = [
   {
+    slug: "ai-money-for-beginners",
     title: "ใช้ AI หาเงินยังไง สำหรับมือใหม่ที่ยังไม่มีประสบการณ์",
     category: "AI สำหรับมือใหม่",
     desc: "เริ่มจากสิ่งที่คุณรู้อยู่แล้ว แล้วใช้ AI ช่วยเปลี่ยนให้เป็นสินค้าเล็ก ๆ ที่ทดสอบขายได้จริง",
   },
   {
+    slug: "ai-solo-business",
     title: "AI ไม่ได้เสกเงิน แต่มันช่วยให้เริ่มธุรกิจคนเดียวได้เร็วขึ้น",
     category: "One-Person Business",
     desc: "เข้าใจบทบาทที่แท้จริงของ AI: ลดเวลา ลดต้นทุน และช่วยให้คุณทดลองไอเดียได้ไวขึ้น",
   },
   {
+    slug: "first-baht",
     title: "เงินบาทแรกสำคัญกว่าไอเดียธุรกิจล้านบาท เพราะอะไร",
     category: "Mindset",
     desc: "รายได้แรกคือหลักฐานว่ามีคนยอมจ่าย และเป็นจุดเริ่มต้นของการเรียนรู้จากตลาดจริง",
@@ -151,8 +154,8 @@ export default function LandingPage() {
                 Learn with Rin สอนใช้ AI แบบเข้าใจง่าย ไม่ซับซ้อน สำหรับคนที่อยากเริ่มทำ Digital Product, E-book, Template หรือธุรกิจคนเดียวด้วย AI
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button className="h-13 rounded-full bg-[#4DA3FF] px-7 text-base font-semibold text-white shadow-lg shadow-sky-200 hover:bg-[#2F80ED]">
-                  เริ่มเรียนฟรีจากบทความ <ArrowRight className="ml-2 h-4 w-4" />
+                <Button className="h-13 rounded-full bg-[#4DA3FF] px-7 text-base font-semibold text-white shadow-lg shadow-sky-200 hover:bg-[#2F80ED]" asChild>
+                  <a href="/blog">เริ่มเรียนฟรีจากบทความ <ArrowRight className="ml-2 h-4 w-4" /></a>
                 </Button>
                 <Button variant="outline" className="h-13 rounded-full border-sky-200 bg-white px-7 text-base font-semibold text-[#123A63] hover:bg-sky-50" asChild>
                   <a href="#free">ดาวน์โหลด Checklist ฟรี</a>
@@ -266,7 +269,9 @@ export default function LandingPage() {
               <h2 className="mt-3 text-3xl font-black font-sans leading-[3.0] text-[#123A63] md:text-4xl">บทความเริ่มต้นที่ควรอ่าน</h2>
               <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">เนื้อหาสำหรับคนที่อยากเริ่มต้นใช้ AI หาเงินออนไลน์โดยไม่รู้จะเริ่มจากไหน</p>
             </div>
-            <Button variant="outline" className="rounded-full border-sky-200 text-[#123A63] hover:bg-sky-50">ดูบทความทั้งหมด</Button>
+            <Button variant="outline" className="rounded-full border-sky-200 text-[#123A63] hover:bg-sky-50" asChild>
+              <a href="/blog">ดูบทความทั้งหมด</a>
+            </Button>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {articles.map((article) => (
@@ -277,7 +282,7 @@ export default function LandingPage() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-black leading-[3.0] text-[#123A63]">{article.title}</h3>
                   <p className="mt-3 leading-7 text-slate-600">{article.desc}</p>
-                  <a href="#free" className="mt-5 flex items-center font-bold text-[#2F80ED]">
+                  <a href={`/blog/${article.slug}`} className="mt-5 flex items-center font-bold text-[#2F80ED]">
                     อ่านต่อ <ChevronRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
                   </a>
                 </CardContent>
