@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Subscriber {
+  id        Int      @id @default(autoincrement())
+  name      String
+  contact   String   @unique
+  type      String   // "email" | "line"
+  source    String   @default("checklist")
+  createdAt DateTime @default(now())
+
+  @@map("subscribers")
+}
+
+model Order {
+  id              Int      @id @default(autoincrement())
+  stripeSessionId String   @unique
+  customerEmail   String
+  customerName    String?
+  productId       String
+  productName     String
+  amount          Int      // satang (THB × 100)
+  status          String   @default("pending") // pending | paid | refunded
+  createdAt       DateTime @default(now())
+
+  @@map("orders")
+}

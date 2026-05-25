@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+}
+
+body {
+  font-family: 'Sarabun', 'Noto Sans Thai', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 2.0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Sarabun', 'Noto Sans Thai', sans-serif;
+  font-weight: 900;
+  line-height: 3.0;
+  letter-spacing: 0;
+}
+
+.h-13 {
+  height: 3.25rem;
+}
