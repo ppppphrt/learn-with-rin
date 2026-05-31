@@ -41,7 +41,7 @@ const steps = [
   {
     icon: Sparkles,
     title: "ใช้ AI ช่วยสร้าง Product",
-    text: "เปลี่ยนไอเดียเป็น E-book, Template, Workbook, Prompt Pack หรือบริการเล็ก ๆ",
+    text: "เปลี่ยนไอเดียเป็น Courses, Template, Workbook, Prompt Pack หรือบริการเล็ก ๆ",
   },
   {
     icon: MessageCircle,
@@ -52,7 +52,7 @@ const steps = [
 
 const resources = [
   "Checklist เริ่มหาเงินจาก AI ใน 7 วัน",
-  "Template วางแผน E-book เล่มแรก",
+  "Template วางแผน Courses เล่มแรก",
   "Prompt Pack สำหรับทำ Digital Product",
   "Worksheet หาไอเดียรายได้จากทักษะตัวเอง",
 ]
@@ -66,7 +66,7 @@ const products = [
     title: "30 วิธีใช้ AI สร้างรายได้สำหรับมือใหม่",
     hook: "AI ไม่ได้มาแย่งงาน… แต่มาช่วยหาเงิน",
     description: "หนังสือที่รวม 30 วิธีใช้ AI เพื่อเริ่มสร้างรายได้ แม้ไม่มีพื้นฐานก็เริ่มได้ทันที พร้อมแนวทาง แหล่งรายได้ และเครื่องมือแนะนำครบในเล่ม",
-    bullets: ["เขียน E-book ด้วย ChatGPT", "ใช้ AI ทำคอนเทนต์ให้ร้านค้า", "สร้างภาพด้วย Midjourney", "ใช้ AI ขายของออนไลน์", "Prompt Writing สำหรับมือใหม่"],
+    bullets: ["เขียน Courses ด้วย ChatGPT", "ใช้ AI ทำคอนเทนต์ให้ร้านค้า", "สร้างภาพด้วย Midjourney", "ใช้ AI ขายของออนไลน์", "Prompt Writing สำหรับมือใหม่"],
     bonuses: ["Template ใช้งานได้ทันที", "รายชื่อเว็บไซต์/เครื่องมือ AI ฟรี"],
     fit: "เหมาะกับแม่ค้าออนไลน์ ฟรีแลนซ์ พนักงานประจำ และคนที่อยากเริ่มธุรกิจเล็ก ๆ ด้วย AI",
     price: "390 บาท",
@@ -80,11 +80,11 @@ const products = [
     type: "คอร์สออนไลน์",
     badge: "แนะนำสำหรับคนอยากมีสินค้าเอง",
     icon: GraduationCap,
-    title: "คอร์สสร้าง E-book ด้วย AI แบบจับมือทำ",
+    title: "คอร์สสร้าง Courses ด้วย AI แบบจับมือทำ",
     hook: "เปลี่ยนไอเดียธรรมดา ให้กลายเป็นรายได้จริง",
-    description: "คอร์สสำหรับมือใหม่ที่อยากสร้าง E-book ขายด้วย ChatGPT และ Canva ตั้งแต่หาไอเดีย เขียนเนื้อหา ออกแบบ จนถึงวางขายจริง",
-    bullets: ["หาไอเดีย E-book ที่ขายได้", "ใช้ ChatGPT ช่วยเขียนแบบมืออาชีพ", "จัดหน้า E-book ด้วย Canva", "ขายผ่าน Facebook / LINE / เว็บไซต์", "ตั้งระบบส่งไฟล์อัตโนมัติ"],
-    bonuses: ["Template ปก E-book", "Prompt เขียน E-book", "Cheat Sheet ตั้งราคา", "ไฟล์ตัวอย่าง E-book"],
+    description: "คอร์สสำหรับมือใหม่ที่อยากสร้าง Courses ขายด้วย ChatGPT และ Canva ตั้งแต่หาไอเดีย เขียนเนื้อหา ออกแบบ จนถึงวางขายจริง",
+    bullets: ["หาไอเดีย Courses ที่ขายได้", "ใช้ ChatGPT ช่วยเขียนแบบมืออาชีพ", "จัดหน้า Courses ด้วย Canva", "ขายผ่าน Facebook / LINE / เว็บไซต์", "ตั้งระบบส่งไฟล์อัตโนมัติ"],
+    bonuses: ["Template ปก Courses", "Prompt เขียน Courses", "Cheat Sheet ตั้งราคา", "ไฟล์ตัวอย่าง Courses"],
     fit: "เหมาะกับคนที่มีความรู้ แต่อยากเปลี่ยนเป็นสินค้าดิจิทัลที่ขายซ้ำได้",
     price: "1,990 บาท",
     oldPrice: "5,900 บาท",
@@ -123,7 +123,7 @@ export default function LandingPage() {
             <a href="#start" className="hover:text-blue-500">เริ่มที่นี่</a>
             <a href="#blog" className="hover:text-blue-500">บทความ</a>
             <a href="#free" className="hover:text-blue-500">ไฟล์ฟรี</a>
-            <a href="#product" className="hover:text-blue-500">E-book</a>
+            <a href="#product" className="hover:text-blue-500">Courses</a>
           </div>
           <Button className="rounded-full bg-[#4DA3FF] px-5 text-white hover:bg-[#2F80ED]" asChild>
             <a href="#free">รับ Checklist ฟรี</a>
@@ -151,7 +151,7 @@ export default function LandingPage() {
                 </span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Learn with Rin สอนใช้ AI แบบเข้าใจง่าย ไม่ซับซ้อน สำหรับคนที่อยากเริ่มทำ Digital Product, E-book, Template หรือธุรกิจคนเดียวด้วย AI
+                Learn with Rin สอนใช้ AI แบบเข้าใจง่าย ไม่ซับซ้อน สำหรับคนที่อยากเริ่มทำ Digital Product, Courses, Template หรือธุรกิจคนเดียวด้วย AI
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button className="h-13 rounded-full bg-[#4DA3FF] px-7 text-base font-semibold text-white shadow-lg shadow-sky-200 hover:bg-[#2F80ED]" asChild>
@@ -422,13 +422,13 @@ export default function LandingPage() {
                 <p className="font-bold text-[#2F80ED]">เลือกไม่ถูก?</p>
                 <h3 className="mt-2 text-2xl font-black text-[#123A63]">เริ่มจากเป้าหมายของคุณก่อน</h3>
                 <p className="mt-3 leading-7 text-slate-600">
-                  ถ้าอยากเห็นภาพรวมให้เริ่มจากหนังสือ ถ้าอยากมีสินค้าเป็นของตัวเองให้เลือกคอร์ส E-book
+                  ถ้าอยากเห็นภาพรวมให้เริ่มจากหนังสือ ถ้าอยากมีสินค้าเป็นของตัวเองให้เลือกคอร์ส Courses
                 </p>
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
                 {[
                   { label: "อยากเริ่มถูก ๆ", value: "หนังสือ 390 บาท" },
-                  { label: "อยากมี E-book", value: "คอร์ส E-book" },
+                  { label: "อยากมี Courses", value: "คอร์ส Courses" },
                   { label: "อยากใช้ ChatGPT หาเงิน", value: "คอร์ส ChatGPT" },
                 ].map((item) => (
                   <div key={item.label} className="rounded-3xl bg-white p-5 shadow-sm">
@@ -465,7 +465,7 @@ export default function LandingPage() {
             <a href="#start" className="hover:text-white">เริ่มที่นี่</a>
             <a href="#blog" className="hover:text-white">บทความ</a>
             <a href="#free" className="hover:text-white">ไฟล์ฟรี</a>
-            <a href="#product" className="hover:text-white">E-book</a>
+            <a href="#product" className="hover:text-white">Courses</a>
           </div>
         </div>
       </footer>
