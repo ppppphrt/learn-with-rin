@@ -60,6 +60,7 @@ const resources = [
 const products = [
   {
     productId: "book",
+    detailUrl: "/courses/book",
     type: "หนังสือ",
     badge: "เริ่มง่ายที่สุด",
     icon: BookOpen,
@@ -77,6 +78,7 @@ const products = [
   },
   {
     productId: "course_ebook",
+    detailUrl: "/courses/ebook",
     type: "คอร์สออนไลน์",
     badge: "แนะนำสำหรับคนอยากมีสินค้าเอง",
     icon: GraduationCap,
@@ -94,6 +96,7 @@ const products = [
   },
   {
     productId: "course_chatgpt",
+    detailUrl: "/courses/chatgpt",
     type: "คอร์สออนไลน์",
     badge: "เหมาะกับมือใหม่ 0 พื้นฐาน",
     icon: Laptop,
@@ -403,6 +406,9 @@ export default function LandingPage() {
                           productId={product.productId}
                           label={product.checkoutLabel}
                         />
+                        <Button variant="outline" className="h-12 rounded-full border-sky-200 bg-white text-[#123A63] hover:bg-sky-50" asChild>
+                          <a href={product.detailUrl}>รายละเอียดคอร์ส</a>
+                        </Button>
                         <Button variant="outline" className="h-12 rounded-full border-sky-200 bg-white text-[#123A63] hover:bg-sky-50" asChild>
                           <a href="https://lin.ee/Fs1Ke4ZT" target="_blank" rel="noreferrer">
                             {product.secondaryCta}
