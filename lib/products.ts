@@ -23,6 +23,12 @@ export const PRODUCTS = {
     price: 1990,
     label: "สมัครเรียน 1,990 บาท",
   },
+  course_website: {
+    name: "Website for Business",
+    description: "สร้างเว็บไซต์ธุรกิจที่ดูน่าเชื่อถือ พร้อมขาย พร้อมหาลูกค้าได้จริง โดยไม่ต้องเขียนโค้ด",
+    price: 1990,
+    label: "สมัครเรียน 1,990 บาท",
+  },
 } as const
 
 export type ProductId = keyof typeof PRODUCTS
