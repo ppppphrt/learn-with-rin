@@ -17,6 +17,12 @@ export const PRODUCTS = {
     price: 1990,
     label: "สมัครเรียน 1,990 บาท",
   },
+  course_chatbot: {
+    name: "AI Chatbot for Business",
+    description: "สร้าง AI Chatbot ให้ธุรกิจตอบลูกค้า ขายของ และเก็บ Lead ได้อัตโนมัติ",
+    price: 1990,
+    label: "สมัครเรียน 1,990 บาท",
+  },
 } as const
 
 export type ProductId = keyof typeof PRODUCTS

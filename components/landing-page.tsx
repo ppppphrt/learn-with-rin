@@ -112,6 +112,24 @@ const products = [
     secondaryCta: "ทัก LINE เพื่อสมัครเรียน",
     highlight: false,
   },
+  {
+    productId: "course_chatbot",
+    detailUrl: "/courses/chatbot",
+    type: "คอร์สออนไลน์สด",
+    badge: "Early Bird 50 ท่านแรก",
+    icon: MessageCircle,
+    title: "AI Chatbot for Business",
+    hook: "สร้าง Chatbot ให้ธุรกิจตอบลูกค้าและขายของอัตโนมัติ",
+    description: "เรียนรู้สร้าง AI Chatbot สำหรับธุรกิจ เชื่อมต่อ LINE OA, Facebook และ Website เพื่อช่วยตอบลูกค้า เก็บ Lead และส่งต่อให้ทีมขายแบบอัตโนมัติ",
+    bullets: ["ออกแบบ Chatbot Flow และ Customer Journey", "สร้าง Chatbot สำหรับ LINE OA และ Facebook", "เชื่อมต่อ CRM และ Google Sheets", "ทำ Automation ด้วย n8n / Make", "ไม่ต้องเขียนโค้ด"],
+    bonuses: ["เรียนสดทุกวันอาทิตย์ 13.00–16.00 น.", "ดูย้อนหลังได้ตลอด", "5 สัปดาห์"],
+    fit: "เหมาะกับเจ้าของธุรกิจ SME ร้านค้าออนไลน์ นักการตลาด และทีม Customer Service",
+    price: "1,990 บาท",
+    oldPrice: "5,900 บาท",
+    checkoutLabel: "สมัครเรียน 1,990 บาท",
+    secondaryCta: "ทัก LINE เพื่อสมัครเรียน",
+    highlight: false,
+  },
 ]
 
 export default function LandingPage() {
